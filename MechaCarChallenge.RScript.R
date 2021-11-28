@@ -3,11 +3,5 @@ data.frame <- read.csv(file = '/Volumes/Pud SSD/Analytics/Columbia University Bo
 
 
 #perform linear regression
-regression <- lm(vehicle_length ~ vehicle_weight, data = data.frame)
-summary(regression)
-
-regression <- lm(vehicle_length ~ spoiler_angle, data = data.frame)
-summary(regression)
-
-regression <- lm(vehicle_length ~ mpg, data = data.frame)
-summary(regression)
+reg <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = data.frame)
+summary(reg)
